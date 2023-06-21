@@ -12,7 +12,7 @@ body {
 .card {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #00efba, #AD9B7A);
+    background: linear-gradient(135deg, #00efba, #5b548a);
     color: #fff;
     margin: 100px auto 0;
     border-radius: 20px;
@@ -28,6 +28,10 @@ body {
     justify-content: center;
 }
 
+.search {
+    position: relative;
+}
+
 .search input {
     border: 0;
     outline: 0;
@@ -39,6 +43,7 @@ body {
     flex: 1;
     margin-right: 16px;
     font-size: 18px;
+
 }
 
 .search button {
@@ -46,9 +51,11 @@ body {
     outline: 0;
     background: #ebfffc;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 60px !important;
+    height: 60px !important;
     cursor: pointer;
+    position: absolute;
+    right: 10px;
 }
 
 .search button img {
@@ -74,15 +81,18 @@ body {
 .details {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 20px;
     margin-top: 50px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .col {
     display: flex;
     align-items: center;
     text-align: left;
+    margin: 25px;
 
 }
 
@@ -94,4 +104,17 @@ body {
 .humidity .wind {
     font-size: 28px;
     margin-top: -6px;
+}
+
+.weather {
+    display: none;
+    transition: 1s;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    display: none;
 }
